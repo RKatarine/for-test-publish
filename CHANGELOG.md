@@ -1,3 +1,11 @@
+## 1.2.0 (2022-10-06)
+
+### Feat
+
+- up version
+- up version
+- up version
+
 ## 1.1.0 (2022-10-06)
 
 ### Feat
