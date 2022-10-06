@@ -4,7 +4,3 @@ version_files = [
     "package.json:version",
     ".cz.toml:version"
 ]
-version_files = [
-    "pacakge.json:version",
-    ".cz.toml:version"
-]
