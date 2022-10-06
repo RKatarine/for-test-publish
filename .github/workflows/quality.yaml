@@ -1,0 +1,15 @@
+name: Check quality
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint-commit-message:
+    runs-on: ubuntu-latest
+    name: "Lint commit message"
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm run commit-lint

@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "commit": "cz",
-    "commitinit": "cz bump --help",
+    "commit-lint": ".scripts/commit-filter-check.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
