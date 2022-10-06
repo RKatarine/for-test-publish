@@ -1,3 +1,16 @@
+## 1.3.0 (2022-10-06)
+
+### Feat
+
+- **lint**: lint commit message
+- **lint**: lint commit message
+- **lint**: lint commit message
+- **lint**: lint commit message
+- **lint**: lint commit message
+- bla-bla
+- **test**: bla-bla
+- **test**: first in first out
+
 ## 1.2.0 (2022-10-06)
 
 ### Feat
