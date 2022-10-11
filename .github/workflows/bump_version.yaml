@@ -51,17 +51,13 @@ jobs:
     needs:
       - bump-version
     steps:
-      - name: Set version from release
-        uses: reedyuk/npm-version@1.1.1
+      - uses: actions/checkout@v3
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v3
         with:
-          version: ${{ steps.cz.outputs.version }}
-          git-tag-version: false
-
-      - name: Create NPM config
-        run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
+      - run: npm publish
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Publish package
-        working-directory: './for-test-publish/'
-        run: npm publish
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
