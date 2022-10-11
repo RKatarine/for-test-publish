@@ -63,4 +63,5 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish package
+        working-directory: './for-test-publish/'
         run: npm publish
