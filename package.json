@@ -7,9 +7,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "true",
+    "test": "true",
     "commit": "cz",
-    "commit-lint": ".scripts/commit-filter-check.sh",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit-lint": ".scripts/commit-filter-check.sh"
   },
   "repository": {
     "type": "git",
@@ -35,5 +36,11 @@
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
     }
+  },
+  "dependencies": {
+    "@near-wallet-selector/core": "^6.0.1",
+    "@roketo/sdk": "^0.3.0",
+    "bn.js": "^5.2.1",
+    "near-api-js": "^1.1.0"
   }
 }
